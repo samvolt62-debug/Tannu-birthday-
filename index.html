@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Tannu Babu ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+overflow:hidden;
+text-align:center;
+color:white;
+}
+.container{
+margin-top:50px;
+position:relative;
+z-index:2;
+}
+h1{
+font-size:42px;
+animation:glow 2s infinite;
+}
+@keyframes glow{
+50%{text-shadow:0 0 20px white;}
+}
+.balloon{
+position:absolute;
+bottom:-120px;
+font-size:45px;
+animation:float 10s linear infinite;
+}
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
+}
+.cake{
+font-size:120px;
+margin:20px 0;
+}
+.message{
+background:rgba(255,255,255,.2);
+padding:20px;
+border-radius:20px;
+width:85%;
+margin:auto;
+font-size:20px;
+backdrop-filter:blur(5px);
+}
+button{
+padding:15px 30px;
+font-size:20px;
+border:none;
+border-radius:30px;
+background:#ff4081;
+color:white;
+cursor:pointer;
+margin-top:20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h1>🎉 Happy Birthday 🎉</h1>
+<h2>Tannu Babu (Moti) ❤️</h2>
+
+<div class="cake">🎂</div>
+
+<button onclick="showMessage()">Open Your Surprise 🎁</button>
+
+<div id="msg" class="message" style="display:none;">
+💖 Sorry baccha, mai is baar tere birthday me nahi hu. Ab haalat hi aise hain ki kya kar sakte hain.
+
+Lekin in sab ke bawjood mai aapse bahut pyaar karta hu ❤️ aur mai apni puri life aapke saath bitana chahta hu.
+
+Love you mera Garam Masala 🥹💕
+
+Thanks for coming in my life.
+
+Ab sirf aapke aane ki deri hai...
+
+Sorry mera baccha ❤️
+
+🎂 Happy Happy Happy Birthday Meri Moti 😘
+</div>
+
+<audio id="music" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+for(let i=0;i<25;i++){
+let b=document.createElement("div");
+b.className="balloon";
+b.innerHTML="🎈";
+b.style.left=Math.random()*100+"%";
+b.style.animationDuration=(6+Math.random()*5)+"s";
+document.body.appendChild(b);
+}
+
+function showMessage(){
+document.getElementById("msg").style.display="block";
+document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
